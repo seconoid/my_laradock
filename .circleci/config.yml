@@ -8,7 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/php:latest
-      - image: selenium/standalone-chrome:latest
 
     environment:
       - APP_DEBUG: true
@@ -42,4 +41,18 @@ jobs:
 
       # run tests!
       - run: vendor/bin/phpunit
-      - run: php artisan dusk
+
+      # dusk test
+      - run:
+          name: Start Chrome Driver
+          command: ./vendor/laravel/dusk/bin/chromedriver-linux
+          background: true
+
+      - run:
+          name: Run Laravel Server
+          command: php artisan serve
+          background: true
+
+      - run:
+          name: Run Laravel Dusk Tests
+          command: php artisan dusk
