@@ -9,9 +9,9 @@ jobs:
       # specify the version you desire here
       - image: circleci/php:latest
         environment:
-          APP_DEBUG:true
-          APP_ENV=testing
-          APP_KEY=base64:+x6umCZG3yr0yRurdJlLBqfpUXGakkzGiw1nkAUUZOs=
+          APP_DEBUG: true
+          APP_ENV: testing
+          APP_KEY: base64:+x6umCZG3yr0yRurdJlLBqfpUXGakkzGiw1nkAUUZOs=
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
