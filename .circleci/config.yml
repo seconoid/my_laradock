@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/php:7.2-cli-browsers
+      - image: circleci/php:latest
         environment:
           APP_ENV=local
 
@@ -36,4 +36,4 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: phpunit
+      - run: vendor/bin/phpunit
