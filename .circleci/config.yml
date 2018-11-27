@@ -10,7 +10,7 @@ jobs:
       - image: circleci/php:latest
         environment:
           APP_DEBUG:true
-          APP_ENV=test
+          APP_ENV=local
           APP_KEY=base64:+x6umCZG3yr0yRurdJlLBqfpUXGakkzGiw1nkAUUZOs=
 
       # Specify service dependencies here if necessary
