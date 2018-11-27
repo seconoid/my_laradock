@@ -8,7 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/php:latest
-      - image: circleci/node-jessie-browsers
 
     environment:
       - APP_DEBUG: true
