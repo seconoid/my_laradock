@@ -43,10 +43,6 @@ jobs:
       - run: vendor/bin/phpunit
 
       # dusk test
-      - run: sudo apt-get install -y libsqlite3-dev
-      - run: cp .env.testing .env
-      - run: composer install -n --ignore-platform-reqs
-
       - run:
           name: Start Chrome Driver
           command: ./vendor/laravel/dusk/bin/chromedriver-linux
