@@ -46,11 +46,6 @@ jobs:
       - run: cp .env.testing .env
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
 
-       - run:
-          name: Open Browsers
-          command: DISPLAY=:0 ./vendor/laravel/dusk/bin/chromedriver-linux
-          background: true
-
       - run:
           name: Run Laravel Server
           command: php artisan serve
