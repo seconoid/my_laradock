@@ -11,7 +11,7 @@ jobs:
 
     environment:
       - APP_DEBUG: true
-      - APP_ENV: local
+      - APP_ENV: testing
       - APP_KEY: base64:+x6umCZG3yr0yRurdJlLBqfpUXGakkzGiw1nkAUUZOs=
       - APP_URL: http://localhost
 
@@ -43,6 +43,7 @@ jobs:
       - run: vendor/bin/phpunit
 
       # dusk test
+      - run: cp .env.testing .env
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
 
       - run:
