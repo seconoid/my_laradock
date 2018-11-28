@@ -47,5 +47,8 @@ jobs:
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
 
       - run:
-          name: Run Laravel Dusk Tests
-          command: php artisan dusk
+          name: Run Laravel Server
+          command: php artisan serve
+          background: true
+          
+      - run: command: php artisan dusk
