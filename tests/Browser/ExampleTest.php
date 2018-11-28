@@ -19,5 +19,7 @@ class ExampleTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Laravel');
         });
+
+        var_dump($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     }
 }

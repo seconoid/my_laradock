@@ -14,7 +14,6 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        var_dump($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
         $this->assertTrue(true);
     }
 }
