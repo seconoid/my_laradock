@@ -53,7 +53,7 @@ jobs:
 
       - run:
           name: Serve Application
-          command: php artisan serve --port=80
+          command: sudo php artisan serve
           background: true
 
       - run: php artisan dusk
