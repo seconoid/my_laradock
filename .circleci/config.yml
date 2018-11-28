@@ -43,6 +43,8 @@ jobs:
       - run: vendor/bin/phpunit
 
       # dusk test
+      - run: chmod 755 ./vendor/laravel/dusk/bin/*
+      
       - run:
           name: Start Chrome Driver
           command: ./vendor/laravel/dusk/bin/chromedriver-linux
