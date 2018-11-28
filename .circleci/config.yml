@@ -45,15 +45,4 @@ jobs:
       # dusk test
       - run: cp .env.testing .env
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
-
-      - run:
-          name: Open Browsers
-          background: true
-          command: DISPLAY=:0 ./vendor/laravel/dusk/bin/chromedriver-linux
-
-      - run:
-          name: Serve Application
-          command: sudo php artisan serve
-          background: true
-
       - run: php artisan dusk
