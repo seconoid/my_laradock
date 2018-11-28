@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/php:7.2-browsers-legacy
+      - image: circleci/php:7.2-node-browsers-legacy
 
     environment:
       - APP_DEBUG: true
@@ -33,8 +33,6 @@ jobs:
           - v1-dependencies-
 
       - run: composer install -n --prefer-dist
-      - run: npm install
-      - run: npm run production
 
       - save_cache:
           paths:
