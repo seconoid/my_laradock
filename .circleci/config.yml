@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/php:7.2-browsers-legacy
+      - image: circleci/php:7.1-browsers-legacy
 
     environment:
       - APP_DEBUG: true
@@ -45,6 +45,11 @@ jobs:
       # dusk test
       - run: cp .env.testing .env
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
+
+       - run:
+          name: Open Browsers
+          command: DISPLAY=:0 ./vendor/laravel/dusk/bin/chromedriver-linux
+          background: true
 
       - run:
           name: Run Laravel Server
