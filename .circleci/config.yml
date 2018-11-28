@@ -52,8 +52,12 @@ jobs:
           command: DISPLAY=:0 ./vendor/laravel/dusk/bin/chromedriver-linux
 
       - run:
-          name: Run Laravel Server
-          command: php artisan serve
+          name: Docker Host
+          command: echo 127.0.0.1 my.site | sudo tee -a /etc/hosts
+
+      - run:
+          name: Serve Application
+          command: sudo php artisan serve --host=my.site --port=8000
           background: true
 
       - run: php artisan dusk
