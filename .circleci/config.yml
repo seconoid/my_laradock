@@ -9,6 +9,10 @@ jobs:
       # specify the version you desire here
       - image: circleci/php:7.2-node-browsers-legacy
 
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
