@@ -61,5 +61,4 @@ jobs:
          background: true
 
       - run: cp .env.testing .env
-      - run: chmod 755 ./vendor/laravel/dusk/bin/*
       - run: php artisan dusk
