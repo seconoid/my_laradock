@@ -10,10 +10,6 @@ jobs:
       - image: circleci/php:7.2-node-browsers-legacy
 
     environment:
-      - APP_DEBUG: true
-      - APP_ENV: testing
-      - APP_KEY: base64:+x6umCZG3yr0yRurdJlLBqfpUXGakkzGiw1nkAUUZOs=
-      - APP_URL: http://localhost
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
