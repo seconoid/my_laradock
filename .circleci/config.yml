@@ -31,6 +31,8 @@ jobs:
           - v1-dependencies-
 
       - run: composer install -n --prefer-dist
+      - run: npm install --production
+      - run: npm run production
 
       - save_cache:
           paths:
