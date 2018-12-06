@@ -33,7 +33,7 @@ jobs:
 
       - run: composer install -n --prefer-dist
       - run: npm install --production
-      - rub: npm audit
+      - run: npm audit
       - run: npm run production
 
       - save_cache:
