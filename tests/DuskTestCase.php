@@ -37,7 +37,7 @@ abstract class DuskTestCase extends BaseTestCase
 
         if (env('USE_SELENIUM', 'false') == 'true') {
             return RemoteWebDriver::create(
-                'http://selenium:4444/wd/hub', DesiredCapabilities::chrome()
+                'http://0.0.0.0:4444/wd/hub', DesiredCapabilities::chrome()
             );
         } else {
             return RemoteWebDriver::create(
