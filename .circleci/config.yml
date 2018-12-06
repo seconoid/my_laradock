@@ -50,6 +50,16 @@ jobs:
       - run: vendor/bin/phpunit
 
       # dusk test
+      - run:
+         name: Start Chrome Driver
+         command: ./vendor/laravel/dusk/bin/chromedriver-linux
+         background: true
+
+      - run:
+         name: Run Laravel Server
+         command: php artisan serve
+         background: true
+
       - run: cp .env.testing .env
       - run: chmod 755 ./vendor/laravel/dusk/bin/*
       - run: php artisan dusk
